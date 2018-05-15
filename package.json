@@ -4,8 +4,15 @@
   "description": "Demo for Ethereum development methods",
   "main": "index.js",
   "scripts": {
-    "postinstall": "curl https://codeload.github.com/parity-js/shell/tar.gz/v0.2.1 --output parity-ui.tar.gz && tar xzf parity-ui.tar.gz && mv shell-0.2.1 parity-ui && rm parity-ui.tar.gz && cd ./parity-ui && npm install && cd -",
-    "ui:run": "cd ./parity-ui && npm run build && ./node_modules/electron/cli.js .build/electron.js --no-run-parity && cd -"
+    "postinstall": "./scripts/get-parity-ui.sh && ./scripts/get-explorer.sh && ./scripts/get-explorer2.sh",
+    "run:node0": "parity --config node0.toml",
+    "run:ui": "cd ./parity-ui && npm run build && ./node_modules/electron/cli.js .build/electron.js --no-run-parity && cd -",
+    "run:explorer": "cd ./explorer && npm run start && cd -",
+    "run:explorer2": "cd ./explorer2 && npm run start && cd -"
+  },
+  "devDependencies": {
+    "grunt-cli": "*",
+    "bower": "*"
   },
   "keywords": [
     "ethereum",

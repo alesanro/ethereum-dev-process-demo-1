@@ -8,7 +8,7 @@ port = 30300
 [rpc]
 port = 8540
 apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
-
+cors = ["http://localhost:8000"]
 
 [websockets]
 port = 8546
@@ -19,3 +19,8 @@ password = ["node.pwds"]
 [mining]
 engine_signer = "0x00Bd138aBD70e2F00903268F3Db08f2D25677C9e"
 reseal_on_txs = "none"
+
+[footprint]
+tracing = "on"
+pruning = "archive"
+fat_db = "on"
