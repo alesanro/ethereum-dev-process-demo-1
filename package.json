@@ -1,0 +1,17 @@
+{
+  "name": "ethereum-private-node-demo",
+  "version": "1.0.0",
+  "description": "Demo for Ethereum development methods",
+  "main": "index.js",
+  "scripts": {
+    "postinstall": "curl https://codeload.github.com/parity-js/shell/tar.gz/v0.2.1 --output parity-ui.tar.gz && tar xzf parity-ui.tar.gz && mv shell-0.2.1 parity-ui && rm parity-ui.tar.gz && cd ./parity-ui && npm install && cd -",
+    "ui:run": "cd ./parity-ui && npm run build && ./node_modules/electron/cli.js .build/electron.js --no-run-parity && cd -"
+  },
+  "keywords": [
+    "ethereum",
+    "smart-contracts",
+    "parity"
+  ],
+  "author": "Alex Rudziak <aliaksandr.rudziak@instinctools.ru>",
+  "license": "MIT"
+}
