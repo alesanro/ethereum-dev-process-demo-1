@@ -6,6 +6,7 @@
   "scripts": {
     "postinstall": "./scripts/get-parity-ui.sh && ./scripts/get-explorer.sh && ./scripts/get-explorer2.sh",
     "run:node0": "parity --config node0.toml",
+    "run:node1": "parity --config node1.toml",
     "run:ui": "cd ./parity-ui && npm run build && ./node_modules/electron/cli.js .build/electron.js --no-run-parity && cd -",
     "run:explorer": "cd ./explorer && npm run start && cd -",
     "run:explorer2": "cd ./explorer2 && npm run start && cd -"
