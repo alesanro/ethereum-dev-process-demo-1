@@ -1,4 +1,4 @@
 shell*
 node_modules/
 parity-ui/
-explorer*/*
+explorer*
