@@ -1,0 +1,30 @@
+[parity]
+chain = "demo-spec.json"
+base_path = "/tmp/parity0"
+
+[network]
+port = 30300
+
+[rpc]
+port = 8540
+apis = ["web3", "eth", "net", "personal", "parity", "parity_set", "traces", "rpc", "parity_accounts"]
+cors = ["*"]
+
+[ui]
+port = 8180
+
+[websockets]
+port = 8546
+
+[account]
+password = ["node.pwds"]
+
+[mining]
+engine_signer = "0x00bd138abd70e2f00903268f3db08f2d25677c9e"
+reseal_on_txs = "all"
+force_sealing = true
+
+[footprint]
+tracing = "on"
+pruning = "archive"
+fat_db = "on"
