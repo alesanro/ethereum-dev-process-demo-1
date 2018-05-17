@@ -4,7 +4,10 @@
   "description": "Demo for Ethereum development methods",
   "main": "index.js",
   "scripts": {
-    "postinstall": "./scripts/get-parity-ui.sh && ./scripts/get-explorer.sh && ./scripts/get-explorer2.sh",
+    "get:ui": "./scripts/get-parity-ui.sh",
+    "get:explorer": "./scripts/get-explorer.sh",
+    "get:explorer2": "./scripts/get-explorer2.sh",
+    "get:dev": "npm run get:ui && npm run get:explorer",
     "run:node0": "parity --config node0.toml",
     "run:node1": "parity --config node1.toml",
     "run:ui": "cd ./parity-ui && npm run build && ./node_modules/electron/cli.js .build/electron.js --no-run-parity && cd -",
